@@ -1,0 +1,221 @@
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    color: #212121;
+    font-family: "Open Sans", sans-serif;
+    display: grid;
+    place-items: center;
+  }
+  body {
+    margin: 0%;
+    padding: 0%;
+  }
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+  
+  .joinChatContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .joinChatContainer h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .joinChatContainer input {
+    width: 210px;
+    height: 40px;
+    margin: 7px;
+    border: 2px solid #43a047;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .joinChatContainer button {
+    width: 225px;
+    height: 50px;
+    margin: 7px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+     background:  #43a047;
+     
+   
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .joinChatContainer button:hover {
+    background:#2e2f2e; 
+    transition: background 0.5s;
+   
+    color: #fff;
+  }
+  
+  .chat-window {
+    width: 300px;
+    height: 420px;
+  }
+  
+  .chat-window p {
+    margin: 0;
+  }
+  .chat-window .chat-header {
+    height: 50px; /* Slightly increased height for better touch targets */
+    border-radius: 8px; /* More rounded corners for a softer appearance */
+    background: #263238; /* Dark background for contrast */
+    position: relative;
+    cursor: pointer;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center content vertically */
+    padding: 0 1em; /* Horizontal padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.chat-window .chat-header p {
+    margin: 0; /* Remove default margin */
+    color: #fff; /* Text color */
+    font-weight: 700; /* Bold text */
+    font-size: 1.2rem; /* Increased font size for better readability */
+    line-height: 50px; /* Centered vertically */
+    text-align: left; /* Align text to the left */
+}
+
+.chat-window .chat-header:hover {
+    background: #1c1f22; /* Changes the background color to a darker shade when the mouse hovers over the header */
+    transition: background 0.3s; /* Creates a smooth transition effect over 0.3 seconds for the background color change */
+}
+
+
+  .chat-window .chat-body {
+    height: calc(450px - (45px + 70px));
+    border: 1px solid #263238;
+    background: #fff;
+    margin-top: 5px;
+    border-radius: 6px;
+    position: relative;
+  }
+  .chat-window .chat-body .message-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .chat-window .chat-body .message-container::-webkit-scrollbar {
+    display: none;
+  }
+  .chat-window .chat-body .message {
+    height: auto;
+    padding: 10px;
+    display: flex;
+  }
+  
+  .chat-window .chat-body .message .message-content {
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    max-width: 120px;
+    background-color: #43a047;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  #you {
+    justify-content: flex-start;
+  }
+  
+  #you .message-content {
+    justify-content: flex-start;
+  }
+  
+  #you .message-meta {
+    justify-content: flex-start;
+    margin-left: 5px;
+  }
+  
+  #other {
+    justify-content: flex-end;
+  }
+  
+  #other .message-content {
+    justify-content: flex-end;
+    background-color: cornflowerblue;
+  }
+  
+  #other .message-meta {
+    justify-content: flex-end;
+    margin-right: 5px;
+  }
+  
+  .message-meta #author {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .chat-window .chat-body .message .message-meta {
+    display: flex;
+    font-size: 12px;
+  }
+  
+  .chat-window .chat-footer {
+    margin-top: 10px; /* Increased spacing for better separation */
+    border-radius: 8px; /* Slightly more rounded corners */
+    height: 50px; /* Increased height for better touch targets */
+    border: 1px solid #263238;
+    border-top: none;
+    display: flex;
+    background: #f7f7f7; /* Light background for contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.chat-window .chat-footer input {
+    height: 100%;
+    flex: 85%;
+    border: none; /* Removed border for a cleaner look */
+    padding: 0 0.7em;
+    font-size: 1em;
+    border-right: 1px solid #607d8b; /* Solid border for clarity */
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 8px 0 0 8px; /* Rounded corners on the left side */
+    transition: border 0.3s; /* Transition for focus effect */
+}
+
+.chat-window .chat-footer input:focus {
+    border: 1px solid #4caf50; /* Highlight border on focus */
+}
+
+.chat-window .chat-footer button {
+    border: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    flex: 15%;
+    height: 100%;
+    background: #4caf50; /* Button background color */
+    border-radius: 0 8px 8px 0; /* Rounded corners on the right side */
+    color: white;
+    font-size: 25px; /* Consistent font size */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.chat-window .chat-footer button:hover {
+    background: #388e3c; /* Darker button on hover */
+}
+
+.hide {
+    opacity: 0 !important;
+}
